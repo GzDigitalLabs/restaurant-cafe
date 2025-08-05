@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supabase Test</title>
+</head>
+<body>
+    <h1>Supabase Integration Test</h1>
+    <div id="status">Loading...</div>
+    
+    <!-- Supabase CDN -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    
+    <script>
+        // Test Supabase connection
+        async function testSupabase() {
+            const statusDiv = document.getElementById('status');
+            
+            try {
+                // Test if Supabase is loaded
+                if (typeof supabase === 'undefined') {
+                    statusDiv.innerHTML = '❌ Error: Supabase not loaded';
+                    return;
+                }
+                
+                statusDiv.innerHTML = '✅ Supabase loaded successfully<br>';
+                
+                // Test connection by trying to access a table
+                const { data, error } = await supabase
+                    .from('menu_items')
+                    .select('count')
+                    .limit(1);
+                
+                if (error) {
+                    statusDiv.innerHTML += `❌ Database error: ${error.message}`;
+                } else {
+                    statusDiv.innerHTML += '✅ Database connection successful';
+                }
+                
+            } catch (error) {
+                statusDiv.innerHTML = `❌ Error: ${error.message}`;
+            }
+        }
+        
+        // Run test when page loads
+        document.addEventListener('DOMContentLoaded', testSupabase);
+    </script>
+</body>
+</html> 

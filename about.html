@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GZDigitalLabs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="about-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <img src="public/logogz.jpeg" alt="Restaurant Logo" class="logo-img">
+                    <span class="logo-text">GZDigitalLabs</span>
+                </a>
+            </div>
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                </ul>
+            </nav>
+            <div class="reservation-cta-desktop">
+                <a href="reservation.html" class="btn btn-reservation">
+                    <i class="fas fa-calendar-alt"></i>
+                    Make Reservation
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <nav class="nav-mobile">
+                <ul class="nav-list-mobile">
+                    <li><a href="index.html" class="nav-link-mobile">Home</a></li>
+                    <li><a href="menu.html" class="nav-link-mobile">Menu</a></li>
+                    <li><a href="contact.html" class="nav-link-mobile">Contact</a></li>
+                    <li><a href="about.html" class="nav-link-mobile active">About</a></li>
+                </ul>
+                <a href="reservation.html" class="btn btn-reservation-mobile">
+                    <i class="fas fa-calendar-alt"></i>
+                    Make Reservation
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1 class="about-hero-title">Our Story</h1>
+                <p class="about-hero-subtitle">A Culinary Journey of Excellence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Story Section -->
+    <section class="about-story">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-title">Welcome to GZDigitalLabs</h2>
+                    <p class="about-description">
+                        Founded with a passion for creating exceptional dining experiences, GZDigitalLabs has been 
+                        serving the finest cuisine in Istanbul since our establishment. Located in the heart of Bebek, 
+                        our restaurant combines traditional Turkish flavors with modern culinary techniques to create 
+                        unforgettable meals that tell a story with every bite.
+                    </p>
+                    <p class="about-description">
+                        Our journey began with a simple vision: to create a dining space where every guest feels 
+                        like family, where every meal is crafted with love and attention to detail, and where 
+                        the art of fine dining meets the warmth of Turkish hospitality.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="public/interior.jpg" alt="Restaurant Interior" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="about-values">
+        <div class="container">
+            <h2 class="values-title">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="value-name">Passion</h3>
+                    <p class="value-description">
+                        Every dish is prepared with genuine passion and love for the culinary arts. 
+                        We believe that great food comes from the heart.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="value-name">Freshness</h3>
+                    <p class="value-description">
+                        We source only the finest, freshest ingredients from local suppliers and 
+                        seasonal produce to ensure exceptional quality in every meal.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="value-name">Community</h3>
+                    <p class="value-description">
+                        We're proud to be part of the Istanbul community, serving both locals and 
+                        visitors with the same dedication and warmth.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="value-name">Excellence</h3>
+                    <p class="value-description">
+                        From our kitchen to your table, we maintain the highest standards of 
+                        excellence in every aspect of our service.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="about-team">
+        <div class="container">
+            <h2 class="team-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Chef Mehmet</h3>
+                    <p class="member-role">Head Chef</p>
+                    <p class="member-description">
+                        With over 15 years of culinary experience, Chef Mehmet brings his expertise 
+                        in Turkish and Mediterranean cuisine to create our signature dishes.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="member-name">Aylin</h3>
+                    <p class="member-role">Restaurant Manager</p>
+                    <p class="member-description">
+                        Aylin ensures every guest receives exceptional service and creates 
+                        memorable dining experiences with her warm hospitality.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Ahmet</h3>
+                    <p class="member-role">Sommelier</p>
+                    <p class="member-description">
+                        Our expert sommelier Ahmet curates the perfect wine pairings to 
+                        complement your dining experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Stats Section -->
+    <section class="about-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Happy Guests</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Signature Dishes</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Fresh Ingredients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/logogz.jpeg" alt="GZDigitalLabs Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">GZDigitalLabs</span>
+                    </div>
+                    <p class="footer-description">
+                        Creating exceptional dining experiences with passion, creativity, and the finest ingredients. 
+                        Every meal tells a story at GZDigitalLabs.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="menu.html" class="footer-link">Menu</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nusr-Et Steakhouse Bebek<br>Bebek, Istanbul, Turkey</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>+90 (212) 555-0123</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>template@gzdigitallabs.com</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Sat: 5:00 PM - 10:00 PM<br>Sunday: 4:00 PM - 9:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; 2024 GZDigitalLabs. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                        <a href="#" class="footer-bottom-link">Terms of Service</a>
+                        <a href="#" class="footer-bottom-link">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

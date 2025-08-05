@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Button Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #FDF6EC;
+            padding: 50px;
+        }
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #A4161A, #8B0000);
+            color: white;
+            box-shadow: 0 4px 15px rgba(164, 22, 26, 0.3);
+            border: 2px solid #B08968;
+        }
+        .btn-secondary {
+            background: transparent;
+            color: #A4161A;
+            border: 2px solid #B08968;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Button Test Page</h1>
+        <p>Testing if buttons work without JavaScript interference</p>
+        
+        <div class="hero-buttons">
+            <a href="menu.html" class="btn btn-primary">Discover Dishes</a>
+            <a href="reservation.html" class="btn btn-secondary">Book Table</a>
+        </div>
+        
+        <p style="margin-top: 50px;">
+            <a href="index.html">← Back to Homepage</a>
+        </p>
+    </div>
+</body>
+</html> 

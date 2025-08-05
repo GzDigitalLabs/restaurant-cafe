@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Name - Fine Dining Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <img src="public/logogz.jpeg" alt="Restaurant Logo" class="logo-img">
+                    <span class="logo-text">GZDigitalLabs</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+
+            <!-- Desktop Reservation CTA -->
+            <div class="reservation-cta-desktop">
+                <a href="reservation.html" class="btn btn-reservation">Make Reservation</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle">
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <nav class="nav-mobile">
+                <ul class="nav-list-mobile">
+                    <li><a href="index.html" class="nav-link-mobile active">Home</a></li>
+                    <li><a href="menu.html" class="nav-link-mobile">Menu</a></li>
+                    <li><a href="contact.html" class="nav-link-mobile">Contact</a></li>
+                    <li><a href="about.html" class="nav-link-mobile">About</a></li>
+                </ul>
+                <div class="reservation-cta-mobile">
+                    <a href="reservation.html" class="btn btn-reservation-mobile">Make Reservation</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="public/restaurantHerosecimage.jpg" alt="Restaurant Interior" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Exceptional Dining Experience</h1>
+                <p class="hero-subtitle">Where Every Meal Becomes a Memory</p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn btn-primary">Discover Dishes</a>
+                    <a href="reservation.html" class="btn btn-secondary">Book Table</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Meals Section -->
+    <section class="featured-meals">
+        <div class="container">
+            <h2 class="section-title">Featured Meals</h2>
+            <p class="section-subtitle">Chef's Special Selections</p>
+            <div class="meals-grid" id="featuredMealsGrid">
+                <!-- Featured meals will be loaded dynamically -->
+                <div class="loading-placeholder">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading featured meals...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="about-description">
+                        At GZDigitalLabs, we believe that dining is more than just eating it's an experience that brings people together. 
+                        Our passion for exceptional cuisine and warm hospitality has been the foundation of our success since we opened our doors.
+                    </p>
+                    <p class="about-description">
+                        We take pride in sourcing the finest ingredients and crafting each dish with care and creativity. 
+                        Our team of dedicated chefs and staff work tirelessly to ensure every visit exceeds your expectations.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="public/interior.jpg" alt="Restaurant Interior" class="about-img">
+                </div>
+            </div>
+            
+            <!-- Statistics Section -->
+            <div class="about-stats-section">
+                <div class="stat-box">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">YEARS OF EXCELLENCE</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">HAPPY GUESTS</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">SIGNATURE DISHES</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Guests Say</h2>
+            <p class="section-subtitle">Real Experiences from Real People</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "An absolutely incredible dining experience. The food was exceptional and the service was impeccable. 
+                        GZDigitalLabs has truly mastered the art of fine dining."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Sarah Johnson</strong>
+                            <span>Food Critic & Blogger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Perfect for our anniversary dinner. The atmosphere was romantic and the wine pairing was spot on. 
+                        GZDigitalLabs made our special night unforgettable."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Michael & Lisa Chen</strong>
+                            <span>Regular Guests</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The best fine dining experience in the city. Every dish tells a story and every bite is memorable. 
+                        GZDigitalLabs sets the standard for excellence."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>David Rodriguez</strong>
+                            <span>Chef & Restaurateur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <p class="section-subtitle">Visit Our Restaurant</p>
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="address-card">
+                        <div class="address-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="address-details">
+                            <h3>GZDigitalLabs</h3>
+                            <p class="address-text">
+                                Nusr-Et Steakhouse Bebek<br>
+                                Bebek Mahallesi, Bebek Caddesi<br>
+                                Beşiktaş, Istanbul, Turkey
+                            </p>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+90 (212) 555-0123</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>template@gzdigitallabs.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Mon-Sat: 5:00 PM - 10:00 PM<br>Sunday: 4:00 PM - 9:00 PM</span>
+                                </div>
+                            </div>
+                            <a href="https://maps.google.com/?q=Nusr-Et+Steakhouse+Bebek" target="_blank" class="btn btn-primary open-map-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Open in Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385340.9442783181!2d28.350005887416753!3d41.01483817268404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab61ceb68c49f%3A0xd4eed146559924ff!2sNusr-Et%20Steakhouse%20Bebek!5e0!3m2!1sen!2str!4v1753628028834!5m2!1sen!2str" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/logogz.jpeg" alt="GZDigitalLabs Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">GZDigitalLabs</span>
+                    </div>
+                    <p class="footer-description">
+                        Creating exceptional dining experiences with passion, creativity, and the finest ingredients. 
+                        Every meal tells a story at GZDigitalLabs.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Menu</a></li>
+                        <li><a href="#" class="footer-link">Reservations</a></li>
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Location</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nusr-Et Steakhouse Bebek<br>Bebek, Istanbul, Turkey</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>+90 (212) 555-0123</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>template@gzdigitallabs.com</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Sat: 5:00 PM - 10:00 PM<br>Sunday: 4:00 PM - 9:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; 2024 GZDigitalLabs. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                        <a href="#" class="footer-bottom-link">Terms of Service</a>
+                        <a href="#" class="footer-bottom-link">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Supabase Configuration -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    
+    <!-- Featured Meals Loader -->
+    <script>
+        // Load featured meals from database
+        async function loadFeaturedMeals() {
+            const featuredMealsGrid = document.getElementById('featuredMealsGrid');
+            
+            try {
+                // First, get featured items with their menu item details
+                const { data: featuredItems, error: featuredError } = await supabase
+                    .from('featured_items')
+                    .select(`
+                        slot_number,
+                        menu_items (
+                            id,
+                            name,
+                            price,
+                            description,
+                            category,
+                            icon,
+                            tags,
+                            image_url
+                        )
+                    `)
+                    .order('slot_number', { ascending: true });
+
+                if (featuredError) throw featuredError;
+
+                // Clear loading placeholder
+                featuredMealsGrid.innerHTML = '';
+
+                if (!featuredItems || featuredItems.length === 0) {
+                    // Show empty state when no featured items are selected
+                    featuredMealsGrid.innerHTML = `
+                        <div class="empty-featured-state">
+                            <i class="fas fa-utensils"></i>
+                            <h3>No Featured Items Selected</h3>
+                            <p>Please select featured items from the admin dashboard to display them here.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Create meal cards for featured items
+                featuredItems.forEach(item => {
+                    const menuItem = item.menu_items;
+                    if (!menuItem) return;
+
+                    const mealCard = document.createElement('div');
+                    mealCard.className = 'meal-card';
+                    
+                    const imageUrl = menuItem.image_url || 'public/interior.jpg';
+                    const tags = menuItem.tags ? menuItem.tags.split(',').map(tag => tag.trim()) : [];
+                    
+                    mealCard.innerHTML = `
+                        <div class="meal-image">
+                            <img src="${imageUrl}" alt="${menuItem.name}" class="meal-img" onerror="this.src='public/interior.jpg'">
+                            <div class="meal-overlay">
+                                <span class="meal-price">$${menuItem.price}</span>
+                            </div>
+                        </div>
+                        <div class="meal-content">
+                            <h3 class="meal-title">${menuItem.name}</h3>
+                            <p class="meal-description">${menuItem.description}</p>
+                            <div class="meal-tags">
+                                ${tags.map(tag => `<span class="meal-tag">${tag}</span>`).join('')}
+                            </div>
+                        </div>
+                    `;
+                    
+                    featuredMealsGrid.appendChild(mealCard);
+                });
+
+            } catch (error) {
+                console.error('Error loading featured meals:', error);
+                // Show error message
+                featuredMealsGrid.innerHTML = `
+                    <div class="error-message">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Failed to load featured meals. Please try again later.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Load featured meals when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedMeals();
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

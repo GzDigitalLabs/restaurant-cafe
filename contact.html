@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - GZDigitalLabs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <img src="public/logogz.jpeg" alt="Restaurant Logo" class="logo-img">
+                    <span class="logo-text">GZDigitalLabs</span>
+                </a>
+            </div>
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+            <div class="reservation-cta-desktop">
+                <a href="reservation.html" class="btn btn-reservation">
+                    <i class="fas fa-calendar-alt"></i>
+                    Make Reservation
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <nav class="nav-mobile">
+                <ul class="nav-list-mobile">
+                    <li><a href="index.html" class="nav-link-mobile">Home</a></li>
+                    <li><a href="menu.html" class="nav-link-mobile">Menu</a></li>
+                    <li><a href="contact.html" class="nav-link-mobile active">Contact</a></li>
+                    <li><a href="about.html" class="nav-link-mobile">About</a></li>
+                </ul>
+                <a href="reservation.html" class="btn btn-reservation-mobile">
+                    <i class="fas fa-calendar-alt"></i>
+                    Make Reservation
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <!-- Header Section -->
+            <div class="contact-header">
+                <h1 class="contact-title">Contact Us</h1>
+                <p class="contact-subtitle">Get in Touch with GZDigitalLabs</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <div class="contact-info-card">
+                        <h2 class="contact-section-title">Get in Touch</h2>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">+90 (212) 555-0123</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">template@gzdigitallabs.com</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Address</span>
+                                    <span class="contact-value">Nusr-Et Steakhouse Bebek<br>Bebek, Istanbul, Turkey</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="social-media-section">
+                            <h3>Follow Us</h3>
+                            <div class="social-links-contact">
+                                <a href="#" class="social-link-contact">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link-contact">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link-contact">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link-contact">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Hours -->
+                <div class="business-hours-section">
+                    <div class="business-hours-card">
+                        <h2 class="contact-section-title">Business Hours</h2>
+                        <div class="hours-grid">
+                            <div class="hours-day">
+                                <span class="day">Monday - Saturday</span>
+                                <span class="time">5:00 PM - 10:00 PM</span>
+                            </div>
+                            <div class="hours-day">
+                                <span class="day">Sunday</span>
+                                <span class="time">4:00 PM - 9:00 PM</span>
+                            </div>
+                            <div class="hours-day">
+                                <span class="day">Kitchen Hours</span>
+                                <span class="time">Last Order: 9:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location & Directions -->
+                <div class="location-section">
+                    <div class="location-card">
+                        <h2 class="contact-section-title">Location & Directions</h2>
+                        <div class="location-info">
+                            <div class="address-card">
+                                <div class="address-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="address-details">
+                                    <h3>Nusr-Et Steakhouse Bebek</h3>
+                                    <p class="address-text">Bebek, Istanbul, Turkey</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-car"></i>
+                                    <span>Free parking available</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-subway"></i>
+                                    <span>5 min walk from Bebek Metro</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-bus"></i>
+                                    <span>Bus routes: 22, 25, 30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="map-section">
+                    <div class="map-card">
+                        <h2 class="contact-section-title">Find Us</h2>
+                        <div class="location-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385340.9442783181!2d28.350005887416753!3d41.01483817268404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab61ceb68c49f%3A0xd4eed146559924ff!2sNusr-Et%20Steakhouse%20Bebek!5e0!3m2!0sen!2str!4v1753628028834!5m2!0sen!2str" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/logogz.jpeg" alt="GZDigitalLabs Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">GZDigitalLabs</span>
+                    </div>
+                    <p class="footer-description">
+                        Creating exceptional dining experiences with passion, creativity, and the finest ingredients. 
+                        Every meal tells a story at GZDigitalLabs.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="menu.html" class="footer-link">Menu</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nusr-Et Steakhouse Bebek<br>Bebek, Istanbul, Turkey</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>+90 (212) 555-0123</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>template@gzdigitallabs.com</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Sat: 5:00 PM - 10:00 PM<br>Sunday: 4:00 PM - 9:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; 2024 GZDigitalLabs. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                        <a href="#" class="footer-bottom-link">Terms of Service</a>
+                        <a href="#" class="footer-bottom-link">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

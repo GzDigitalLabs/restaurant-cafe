@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - GZDigitalLabs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <img src="public/logogz.jpeg" alt="Restaurant Logo" class="logo-img">
+                    <span class="logo-text">GZDigitalLabs</span>
+                </a>
+            </div>
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+            <div class="reservation-cta-desktop">
+                <a href="reservation.html" class="btn btn-reservation">
+                    <i class="fas fa-calendar-alt"></i>
+                    Make Reservation
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <nav class="nav-mobile">
+                <ul class="nav-list-mobile">
+                    <li><a href="index.html" class="nav-link-mobile">Home</a></li>
+                    <li><a href="menu.html" class="nav-link-mobile active">Menu</a></li>
+                    <li><a href="contact.html" class="nav-link-mobile">Contact</a></li>
+                    <li><a href="about.html" class="nav-link-mobile">About</a></li>
+                </ul>
+                <a href="reservation.html" class="btn btn-reservation-mobile">
+                    <i class="fas fa-calendar-alt"></i>
+                    Make Reservation
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <div class="container">
+            <h1 class="section-title">Our Menu</h1>
+            <p class="section-subtitle">Discover Our Culinary Excellence</p>
+            
+            <!-- Category Buttons -->
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="starters">
+                    <i class="fas fa-cheese"></i>
+                    Starters/Appetizers
+                </button>
+                <button class="category-btn" data-category="mains">
+                    <i class="fas fa-utensils"></i>
+                    Main Courses
+                </button>
+                <button class="category-btn" data-category="desserts">
+                    <i class="fas fa-ice-cream"></i>
+                    Desserts
+                </button>
+                <button class="category-btn" data-category="drinks">
+                    <i class="fas fa-wine-glass-alt"></i>
+                    Drinks & Cocktails
+                </button>
+            </div>
+            
+            <!-- Menu Content -->
+            <div class="menu-content">
+                <!-- Starters/Appetizers -->
+                <div class="menu-category active" id="starters">
+                    <div class="menu-grid">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Main Courses -->
+                <div class="menu-category" id="mains">
+                    <div class="menu-grid">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-category" id="desserts">
+                    <div class="menu-grid">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Drinks & Cocktails -->
+                <div class="menu-category" id="drinks">
+                    <div class="menu-grid">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/logogz.jpeg" alt="GZDigitalLabs Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">GZDigitalLabs</span>
+                    </div>
+                    <p class="footer-description">
+                        Creating exceptional dining experiences with passion, creativity, and the finest ingredients. 
+                        Every meal tells a story at GZDigitalLabs.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="menu.html" class="footer-link">Menu</a></li>
+                        <li><a href="#" class="footer-link">Reservations</a></li>
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Location</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nusr-Et Steakhouse Bebek<br>Bebek, Istanbul, Turkey</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>+90 (212) 555-0123</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>template@gzdigitallabs.com</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Sat: 5:00 PM - 10:00 PM<br>Sunday: 4:00 PM - 9:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; 2024 GZDigitalLabs. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                        <a href="#" class="footer-bottom-link">Terms of Service</a>
+                        <a href="#" class="footer-bottom-link">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html> 

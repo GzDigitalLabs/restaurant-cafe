@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - GZDigitalLabs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <img src="public/logogz.jpeg" alt="Restaurant Logo" class="logo-img">
+                    <span class="logo-text">GZDigitalLabs</span>
+                </a>
+            </div>
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+            <div class="reservation-cta-desktop">
+                <a href="reservation.html" class="btn btn-reservation">
+                    <i class="fas fa-calendar-alt"></i>
+                    Make Reservation
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <nav class="nav-mobile">
+                <ul class="nav-list-mobile">
+                    <li><a href="index.html" class="nav-link-mobile">Home</a></li>
+                    <li><a href="menu.html" class="nav-link-mobile">Menu</a></li>
+                    <li><a href="contact.html" class="nav-link-mobile">Contact</a></li>
+                    <li><a href="about.html" class="nav-link-mobile">About</a></li>
+                </ul>
+                <a href="reservation.html" class="btn btn-reservation-mobile">
+                    <i class="fas fa-calendar-alt"></i>
+                    Make Reservation
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Admin Dashboard Section -->
+    <section class="admin-section">
+        <div class="container">
+            <h1 class="section-title">Admin Dashboard</h1>
+            <p class="section-subtitle">Manage Your Menu Items</p>
+            
+            <!-- Authentication Messages -->
+            <div class="auth-messages" id="authMessages"></div>
+            
+            <!-- Authentication Container -->
+            <div class="admin-auth-container">
+                <!-- Login Form -->
+                <div id="loginContainer" class="login-container">
+                    <div class="login-card">
+                        <h2 class="login-title">Admin Login</h2>
+                        <p class="login-subtitle">Access the admin dashboard</p>
+                        
+                        <form id="loginForm" class="login-form">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="login-submit-btn">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    Sign In
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div class="login-footer">
+                            <p>Contact the administrator for access credentials</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Dashboard (hidden by default) -->
+                <div id="adminDashboard" class="admin-dashboard" style="display: none;">
+                    <!-- Admin Controls -->
+                    <div class="admin-controls">
+                        <button class="admin-btn active" id="addItemBtn">
+                            <i class="fas fa-plus"></i>
+                            Add New Item
+                        </button>
+                        <button class="admin-btn" id="viewItemsBtn">
+                            <i class="fas fa-list"></i>
+                            View All Items
+                        </button>
+                        <button class="admin-btn" id="featuredItemsBtn">
+                            <i class="fas fa-star"></i>
+                            Featured Dishes
+                        </button>
+                        <button class="admin-btn" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+
+                    <!-- Add/Edit Menu Item Form -->
+                    <div class="admin-form-container" id="addItemForm">
+                        <div class="admin-form-card">
+                            <h2 class="form-title">Add New Menu Item</h2>
+                            
+                            <form class="admin-form" id="menuItemForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="itemName">Item Name *</label>
+                                        <input type="text" id="itemName" name="itemName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="itemPrice">Price ($) *</label>
+                                        <input type="number" id="itemPrice" name="itemPrice" min="0" step="0.01" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="itemDescription">Description *</label>
+                                    <textarea id="itemDescription" name="itemDescription" rows="3" required></textarea>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="itemCategory">Category *</label>
+                                        <select id="itemCategory" name="itemCategory" required>
+                                            <option value="">Select Category</option>
+                                            <option value="starters">Starters/Appetizers</option>
+                                            <option value="mains">Main Courses</option>
+                                            <option value="desserts">Desserts</option>
+                                            <option value="drinks">Drinks & Cocktails</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="itemIcon">Icon</label>
+                                        <select id="itemIcon" name="itemIcon">
+                                            <option value="fas fa-utensils">Utensils</option>
+                                            <option value="fas fa-drumstick-bite">Chicken</option>
+                                            <option value="fas fa-fish">Fish</option>
+                                            <option value="fas fa-cheese">Cheese</option>
+                                            <option value="fas fa-shrimp">Shrimp</option>
+                                            <option value="fas fa-pizza-slice">Pizza</option>
+                                            <option value="fas fa-carrot">Vegetables</option>
+                                            <option value="fas fa-ice-cream">Ice Cream</option>
+                                            <option value="fas fa-birthday-cake">Cake</option>
+                                            <option value="fas fa-wine-glass-alt">Wine</option>
+                                            <option value="fas fa-coffee">Coffee</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="itemTags">Tags (comma separated)</label>
+                                        <input type="text" id="itemTags" name="itemTags" placeholder="e.g., Vegetarian, Popular, Signature">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="itemImage">Image URL</label>
+                                        <input type="url" id="itemImage" name="itemImage" placeholder="https://example.com/image.jpg">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Allergies *</label>
+                                        <div class="allergy-options">
+                                            <label class="radio-label">
+                                                <input type="radio" name="hasAllergies" value="yes" required>
+                                                <span class="radio-custom"></span>
+                                                Yes
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="hasAllergies" value="no" required>
+                                                <span class="radio-custom"></span>
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" id="allergyDetailsGroup" style="display: none;">
+                                        <label for="allergyDetails">Allergy Details</label>
+                                        <textarea id="allergyDetails" name="allergyDetails" rows="2" placeholder="List specific allergies (e.g., Contains nuts, dairy, gluten)"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="admin-submit-btn">
+                                        <i class="fas fa-save"></i>
+                                        Save Menu Item
+                                    </button>
+                                    <button type="button" class="admin-cancel-btn" id="cancelBtn">
+                                        <i class="fas fa-times"></i>
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Menu Items List -->
+                    <div class="admin-items-container" id="itemsList" style="display: none;">
+                        <div class="items-header">
+                            <h2 class="form-title">Current Menu Items</h2>
+                            <div class="items-filter">
+                                <div class="category-buttons">
+                                    <button class="category-btn active" data-category="">
+                                        <i class="fas fa-th-large"></i>
+                                        <span>All Categories</span>
+                                    </button>
+                                    <button class="category-btn" data-category="starters">
+                                        <i class="fas fa-utensils"></i>
+                                        <span>Starters</span>
+                                    </button>
+                                    <button class="category-btn" data-category="mains">
+                                        <i class="fas fa-drumstick-bite"></i>
+                                        <span>Main Courses</span>
+                                    </button>
+                                    <button class="category-btn" data-category="desserts">
+                                        <i class="fas fa-birthday-cake"></i>
+                                        <span>Desserts</span>
+                                    </button>
+                                    <button class="category-btn" data-category="drinks">
+                                        <i class="fas fa-wine-glass-alt"></i>
+                                        <span>Drinks</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items-grid" id="itemsGrid">
+                            <!-- Items will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Featured Dishes Selection -->
+                    <div class="admin-featured-container" id="featuredItems" style="display: none;">
+                        <div class="featured-header">
+                            <h2 class="form-title">Featured Dishes Selection</h2>
+                            <p class="featured-subtitle">Select 3 dishes to display on the homepage featured section</p>
+                        </div>
+                        
+                        <div class="featured-selection">
+                            <div class="featured-slots">
+                                <div class="featured-slot" data-slot="1">
+                                    <div class="slot-header">
+                                        <h3>Featured Dish #1</h3>
+                                        <span class="slot-status">Empty</span>
+                                    </div>
+                                    <div class="slot-content">
+                                        <div class="slot-placeholder">
+                                            <i class="fas fa-plus"></i>
+                                            <p>Select a dish</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="featured-slot" data-slot="2">
+                                    <div class="slot-header">
+                                        <h3>Featured Dish #2</h3>
+                                        <span class="slot-status">Empty</span>
+                                    </div>
+                                    <div class="slot-content">
+                                        <div class="slot-placeholder">
+                                            <i class="fas fa-plus"></i>
+                                            <p>Select a dish</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="featured-slot" data-slot="3">
+                                    <div class="slot-header">
+                                        <h3>Featured Dish #3</h3>
+                                        <span class="slot-status">Empty</span>
+                                    </div>
+                                    <div class="slot-content">
+                                        <div class="slot-placeholder">
+                                            <i class="fas fa-plus"></i>
+                                            <p>Select a dish</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="featured-actions">
+                                <button class="admin-submit-btn" id="saveFeaturedBtn">
+                                    <i class="fas fa-save"></i>
+                                    Save Featured Selection
+                                </button>
+                                <button class="admin-cancel-btn" id="clearFeaturedBtn">
+                                    <i class="fas fa-trash"></i>
+                                    Clear All
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="available-dishes">
+                            <h3>Available Dishes</h3>
+                            <div class="dishes-grid" id="availableDishesGrid">
+                                <!-- Available dishes will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/logogz.jpeg" alt="GZDigitalLabs Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">GZDigitalLabs</span>
+                    </div>
+                    <p class="footer-description">
+                        Creating exceptional dining experiences with passion, creativity, and the finest ingredients. 
+                        Every meal tells a story at GZDigitalLabs.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="menu.html" class="footer-link">Menu</a></li>
+                        <li><a href="#" class="footer-link">Reservations</a></li>
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Location</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nusr-Et Steakhouse Bebek<br>Bebek, Istanbul, Turkey</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>+90 (212) 555-0123</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>template@gzdigitallabs.com</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Sat: 5:00 PM - 10:00 PM<br>Sunday: 4:00 PM - 9:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; 2024 GZDigitalLabs. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                        <a href="#" class="footer-bottom-link">Terms of Service</a>
+                        <a href="#" class="footer-bottom-link">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Supabase CDN -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html> 
